@@ -1,0 +1,74 @@
+/* body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #1db954;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    padding: 20px;
+  }
+  
+  .play-btn {
+    background-color: #fff;
+    color: #1db954;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .song-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px;
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  footer {
+    background-color: #333;
+    padding: 20px;
+    color: white;
+  }
+  
+  footer a {
+    color: #1db954;
+    text-decoration: none;
+  }
+   */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.play-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}

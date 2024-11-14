@@ -1,0 +1,95 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Spotify Clone</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel = "stylesheet" href = "animation.css">
+  <link rel = "stylesheet" href = "fonts.css">
+  <link rel = "stylesheet" href = "responsive.css">
+</head>
+<body>
+  <header>
+    <h1>Top Songs</h1>
+    <p>Pick up your music right where you left off...</p>
+    <a href="Spotify-songs/songs.html" class="play-btn">Play Music</a>
+  </header>
+
+  <section class="song-cards">
+    <div class="card">
+      <img src="b3.jpg" alt="Ed Sheeran">
+      <h2>Ed Sheeran</h2>
+    </div>
+    <div class="card">
+      <img src="b1.jfif" alt="Top Songs 2023">
+      <h2>Top Songs 2023</h2>
+    </div>
+    <div class="card">
+      <img src="b5.jfif" alt="Telugu Songs">
+      <h2>Telugu Songs</h2>
+    </div>
+  </section>
+
+  <footer>
+    <p>Manage your account, download the app, or listen on the web.</p>
+    <a href="https://spotify.com">Get the App</a>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
+
+ -->
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <input id="city" type="text">
+    <button class="btn btn-primary" type="button" onclick="Fetchdata()">Get Weather</button>
+    <div id="weatherDisplay"></div> <!-- New div to display the data -->
+
+    <script>
+       function Fetchdata() {
+    const baseurl = 'http://10.10.9.128:3000/weather/';
+    const user = encodeURIComponent(document.getElementById('city').value);
+    const fullurl = ${baseurl}${user};
+    console.log('Fetching from:', fullurl);  // Log the URL for debugging
+
+    fetch(fullurl)
+        .then(response => {
+            console.log('Fetch response:', response);  // Log the response
+            if (!response.ok) {
+                throw new Error(Network response was not ok: ${response.statusText} (status: ${response.status}));
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Data received:', data);  // Log the data
+            displayData(data);  // Call display function
+        })
+        .catch(error => {
+            console.error('Fetch error:', error);
+            document.getElementById('weatherDisplay').innerText = Error: ${error.message};
+        });
+}
+
+function displayData(data) {
+    const weatherDisplay = document.getElementById('weatherDisplay');
+    weatherDisplay.innerHTML = <h2>Weather Data:</h2><pre>${JSON.stringify(data, null, 2)}</pre>;
+}
+
+
+    </script>
+</body>
+</html>
